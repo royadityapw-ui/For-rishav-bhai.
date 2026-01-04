@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishav Meri Jaaneman</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #ffe6f0;
+            color: #ff0066;
+            padding: 20px;
+        }
+
+        img {
+            width: 200px;
+            height: auto;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .text-container {
+            margin-bottom: 30px;
+            font-size: 22px;
+            line-height: 1.5;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            background-color: #ff66a3;
+            color: white;
+            transition: transform 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        .kiss-message {
+            margin-top: 20px;
+            font-size: 28px;
+            display: none;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Photo -->
+    <img src="https://i.postimg.cc/ZRfr6S9q/cute-heart.jpg" alt="Cute Heart">
+
+    <!-- Text Container -->
+    <div class="text-container" id="textContainer"></div>
+
+    <!-- Button -->
+    <button id="kissButton">Tap Here</button>
+
+    <!-- Kiss Message -->
+    <div class="kiss-message" id="kissMessage">💋 Mainee kisssi lee lee jaanemaan 💋</div>
+
+    <script>
+        // Repeat the text 50 times
+        const textContainer = document.getElementById('textContainer');
+        let repeatedText = '';
+        for (let i = 0; i < 50; i++) {
+            repeatedText += 'Rishav meri jaaneman ❤️ ';
+        }
+        textContainer.innerText = repeatedText;
+
+        // Show kiss message on button click
+        const button = document.getElementById('kissButton');
+        const kissMessage = document.getElementById('kissMessage');
+
+        button.addEventListener('click', () => {
+            kissMessage.style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>
